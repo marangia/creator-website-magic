@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import CategoryTabs from '@/components/CategoryTabs';
@@ -8,6 +8,12 @@ import Features from '@/components/Features';
 import Button from '@/components/Button';
 
 const Index = () => {
+  const [selectedCategory, setSelectedCategory] = useState('estetista');
+
+  const handleCategoryChange = (categoryId: string) => {
+    setSelectedCategory(categoryId);
+  };
+
   useEffect(() => {
     // Intersection Observer for reveal animations
     const observer = new IntersectionObserver(
@@ -39,8 +45,8 @@ const Index = () => {
       
       <main>
         <Hero />
-        <CategoryTabs />
-        <WebsitePreview />
+        <CategoryTabs onCategoryChange={handleCategoryChange} />
+        <WebsitePreview category={selectedCategory} />
         <Features />
 
         {/* CTA Section */}

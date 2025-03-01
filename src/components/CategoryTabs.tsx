@@ -10,8 +10,19 @@ const categories = [
   { id: 'bottega', label: 'Bottega' },
 ];
 
-const CategoryTabs = () => {
+interface CategoryTabsProps {
+  onCategoryChange?: (categoryId: string) => void;
+}
+
+const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   const [activeTab, setActiveTab] = useState('estetista');
+
+  const handleTabChange = (categoryId: string) => {
+    setActiveTab(categoryId);
+    if (onCategoryChange) {
+      onCategoryChange(categoryId);
+    }
+  };
 
   return (
     <div className="container py-12">
@@ -19,7 +30,7 @@ const CategoryTabs = () => {
         {categories.map((category) => (
           <button
             key={category.id}
-            onClick={() => setActiveTab(category.id)}
+            onClick={() => handleTabChange(category.id)}
             className={`relative px-4 py-2 text-base md:text-lg transition-all duration-300 tab-underline ${
               activeTab === category.id 
                 ? 'text-primary-600 font-medium active' 

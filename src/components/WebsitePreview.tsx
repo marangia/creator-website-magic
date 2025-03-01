@@ -1,8 +1,23 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Button from './Button';
 
-const WebsitePreview = () => {
+interface WebsitePreviewProps {
+  category?: string;
+}
+
+const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' }) => {
+  // This will be replaced with your actual images for each category later
+  const [previewImage, setPreviewImage] = useState('/placeholder.svg');
+
+  useEffect(() => {
+    // This effect will update the preview image when the category changes
+    // For now, we'll just use a placeholder with the category name
+    console.log(`Category changed to: ${category}`);
+    // You'll replace this with your actual image paths later
+    setPreviewImage(`/placeholder.svg?category=${category}`);
+  }, [category]);
+
   useEffect(() => {
     // Intersection Observer for reveal animations
     const observer = new IntersectionObserver(
@@ -48,10 +63,12 @@ const WebsitePreview = () => {
             
             {/* Website content mockup */}
             <div className="p-6 bg-gray-50 min-h-[300px] flex flex-col items-center justify-center">
-              <div className="w-full max-w-md mx-auto space-y-4">
-                <div className="w-3/4 h-6 bg-gray-200 rounded-full mx-auto"></div>
-                <div className="w-full h-6 bg-gray-200 rounded-full mx-auto"></div>
-                <div className="w-1/3 h-10 bg-gray-300 rounded-md mx-auto mt-8"></div>
+              {/* This will be updated with actual preview image for selected category */}
+              <div className="text-center">
+                <p className="text-gray-500 mb-4">Preview for: {category}</p>
+                <div className="w-full max-w-md mx-auto h-[200px] bg-gray-100 rounded flex items-center justify-center">
+                  <p className="text-gray-400">Preview image will be updated based on category</p>
+                </div>
               </div>
             </div>
           </div>
@@ -74,7 +91,9 @@ const WebsitePreview = () => {
               </div>
               
               <div className="mt-8 py-10 border-t border-b border-gray-200">
-                <div className="w-full h-20 bg-gray-100 rounded-lg"></div>
+                <div className="w-full h-20 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <p className="text-xs text-gray-400">Mobile preview for {category}</p>
+                </div>
               </div>
             </div>
           </div>
