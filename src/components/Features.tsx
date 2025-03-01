@@ -1,5 +1,11 @@
 
 import React, { useEffect } from 'react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const features = [
   {
@@ -60,34 +66,33 @@ const Features = () => {
           Ci pensiamo noi. Con Visionabile puoi dire per sempre addio a:
         </p>
         
-        <ul className="space-y-6">
-          {features.map((feature, index) => (
-            <li 
+        <Accordion type="single" collapsible className="w-full space-y-4">
+          {features.slice(0, 4).map((feature, index) => (
+            <AccordionItem 
               key={index} 
-              className={`flex items-start gap-3 reveal animate-fade-in`} 
+              value={`item-${index}`}
+              className="reveal animate-fade-in border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm"
               style={{ animationDelay: `${index * 100 + 200}ms` }}
             >
-              {index < 4 ? (
-                <>
-                  <span className="text-primary-600 flex-shrink-0 mt-1">•</span>
-                  <div>
-                    <h3 className="font-medium text-gray-900">{feature.title}</h3>
-                    {feature.description && (
-                      <p className="text-gray-600 mt-1">{feature.description}</p>
-                    )}
-                  </div>
-                </>
-              ) : (
-                <div className="mt-8 pt-6 border-t border-gray-200 w-full">
-                  <h3 className="font-semibold text-gray-900 text-xl">{feature.title}</h3>
-                  {feature.description && (
-                    <p className="text-gray-600 mt-2">{feature.description}</p>
-                  )}
-                </div>
-              )}
-            </li>
+              <AccordionTrigger className="px-4 py-3 hover:no-underline">
+                <div className="text-left font-medium text-gray-900">{feature.title}</div>
+              </AccordionTrigger>
+              <AccordionContent className="px-4 pb-3 pt-0 text-gray-600">
+                {feature.description}
+              </AccordionContent>
+            </AccordionItem>
           ))}
-        </ul>
+        </Accordion>
+        
+        <div 
+          className="mt-8 pt-6 border-t border-gray-200 w-full reveal animate-fade-in" 
+          style={{ animationDelay: '600ms' }}
+        >
+          <h3 className="font-semibold text-gray-900 text-xl">{features[4].title}</h3>
+          {features[4].description && (
+            <p className="text-gray-600 mt-2">{features[4].description}</p>
+          )}
+        </div>
       </div>
     </section>
   );
