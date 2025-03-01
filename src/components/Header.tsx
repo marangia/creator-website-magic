@@ -32,7 +32,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/visionabile-logo.svg" 
             alt="Visionabile" 
-            className="h-10 w-auto animate-fade-in" 
+            className="h-10 w-auto" 
           />
         </a>
 
