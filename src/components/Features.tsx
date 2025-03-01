@@ -78,7 +78,7 @@ const Features = () => {
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="reveal animate-fade-in border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm py-2"
+                className="reveal animate-fade-in py-2"
                 style={{ animationDelay: `${index * 100 + 200}ms` }}
               >
                 <AccordionTrigger className="px-4 py-3 hover:no-underline text-[15px]">
