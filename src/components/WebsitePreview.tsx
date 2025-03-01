@@ -54,7 +54,7 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
         <div className="flex w-full min-w-max gap-6 px-4 md:px-0 md:justify-center">
           {/* Desktop Preview */}
           <div className="w-[340px] md:w-[580px] lg:w-[640px] flex-shrink-0 snap-center reveal animate-fade-in">
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
+            <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 h-full">
               {/* Browser mockup header */}
               <div className="bg-gray-100 px-4 py-3 flex items-center space-x-2 border-b border-gray-200">
                 <div className="flex space-x-1">
@@ -68,11 +68,11 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
               </div>
               
               {/* Website content mockup */}
-              <div className="p-6 bg-gray-50 min-h-[300px] flex flex-col items-center justify-center">
+              <div className="p-6 bg-gray-50 flex-grow flex flex-col items-center justify-center">
                 {/* This will be updated with actual preview image for selected category */}
-                <div className="text-center">
+                <div className="text-center w-full">
                   <p className="text-gray-500 mb-4">Desktop preview for: {category}</p>
-                  <div className="w-full max-w-md mx-auto h-[200px] bg-gray-100 rounded flex items-center justify-center">
+                  <div className="w-full h-[200px] bg-gray-100 rounded flex items-center justify-center">
                     <p className="text-gray-400">Preview image will be updated based on category</p>
                   </div>
                 </div>
@@ -82,14 +82,14 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
           
           {/* Mobile Preview */}
           <div className="w-[280px] flex-shrink-0 snap-center reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-gray-200 mx-auto max-w-[240px]">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-gray-200 mx-auto max-w-[240px] h-full">
               {/* Mobile header */}
               <div className="bg-gray-100 px-4 py-2 border-b border-gray-200 flex justify-end">
                 <div className="w-6 h-1 bg-gray-300 rounded-full"></div>
               </div>
               
               {/* Mobile content */}
-              <div className="p-4 bg-gray-50 min-h-[400px]">
+              <div className="p-4 bg-gray-50 flex-grow">
                 <div className="space-y-3">
                   <div className="w-3/4 h-4 bg-gray-200 rounded-full"></div>
                   <div className="w-full h-4 bg-gray-200 rounded-full"></div>
