@@ -65,7 +65,7 @@ const Index = () => {
                 Ottieni un sito web professionale, veloce e ottimizzato per convertire visitatori in clienti. Senza nessun rischio.
               </p>
               
-              <div className="reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <div className="reveal animate-fade-in flex justify-center" style={{ animationDelay: '200ms' }}>
                 <Button 
                   variant="primary" 
                   size="lg" 
