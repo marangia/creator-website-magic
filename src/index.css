@@ -127,6 +127,19 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
+  
+  /* Snap scrolling */
+  .snap-x {
+    scroll-snap-type: x mandatory;
+  }
+  
+  .snap-center {
+    scroll-snap-align: center;
+  }
+  
+  .snap-mandatory {
+    --webkit-scroll-snap-type: mandatory;
+  }
 }
 
 .reveal {
