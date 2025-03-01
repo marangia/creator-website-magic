@@ -53,7 +53,7 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
       >
         <div className="flex w-full min-w-max gap-6 px-4 md:px-0 md:justify-center">
           {/* Desktop Preview */}
-          <div className="w-full md:w-[580px] lg:w-[640px] flex-shrink-0 snap-center reveal animate-fade-in">
+          <div className="w-[340px] md:w-[580px] lg:w-[640px] flex-shrink-0 snap-center reveal animate-fade-in">
             <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
               {/* Browser mockup header */}
               <div className="bg-gray-100 px-4 py-3 flex items-center space-x-2 border-b border-gray-200">
