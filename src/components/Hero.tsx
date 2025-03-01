@@ -41,7 +41,7 @@ const Hero = () => {
             Dai alla tua attività la presenza online che merita: realizziamo il tuo sito <span className="text-primary-600 font-medium">GRATIS</span>, pronto in meno 24 ore e decidi solo dopo se acquistarlo.
           </p>
           
-          <div className="pt-6 reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
+          <div className="pt-6 flex justify-center reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
             <Button size="lg">
               Crea il tuo sito
             </Button>
