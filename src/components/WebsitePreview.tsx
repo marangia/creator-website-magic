@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import Button from './Button';
 
@@ -113,7 +112,7 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
       </div>
       
-      <div className="mt-12 text-center flex justify-center reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
+      <div className="mt-12 text-center flex flex-col items-center justify-center reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
         <Button size="lg">Crea il tuo sito</Button>
       </div>
     </section>
