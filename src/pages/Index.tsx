@@ -79,7 +79,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <img 
-                src="/lovable-uploads/visionabile-logo.svg" 
+                src="/lovable-uploads/9c85c84a-b483-473c-acaa-daa1ac8a3576.png" 
                 alt="Visionabile" 
                 className="h-8 w-auto mb-4" 
               />

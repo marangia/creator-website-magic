@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
 import { Menu } from 'lucide-react';
@@ -30,7 +29,7 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         <a href="/" className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/visionabile-logo.svg" 
+            src="/lovable-uploads/9c85c84a-b483-473c-acaa-daa1ac8a3576.png" 
             alt="Visionabile" 
             className="h-10 w-auto" 
           />
