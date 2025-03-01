@@ -6,23 +6,28 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Command, Eclipse, Zap, AtSign } from "lucide-react";
 
 const features = [
   {
     title: "Design vecchio che non valorizza la tua attività",
-    description: "I siti web obsoleti allontanano i clienti e danneggiano la tua immagine professionale."
+    description: "I siti web obsoleti allontanano i clienti e danneggiano la tua immagine professionale.",
+    icon: Command
   },
   {
     title: "Tempi di caricamento lenti che fanno scappare i clienti",
-    description: "Ogni secondo di attesa aumenta la probabilità che i visitatori abbandonino il tuo sito."
+    description: "Ogni secondo di attesa aumenta la probabilità che i visitatori abbandonino il tuo sito.",
+    icon: Eclipse
   },
   {
     title: "Contenuti poco chiari che non convincono e convertono",
-    description: "Messaggi confusi non comunicano il valore del tuo servizio e perdono potenziali clienti."
+    description: "Messaggi confusi non comunicano il valore del tuo servizio e perdono potenziali clienti.",
+    icon: Zap
   },
   {
     title: "Navigazione complicata che frustra gli utenti",
-    description: "Un'esperienza utente difficile impedisce ai visitatori di trovare ciò che cercano."
+    description: "Un'esperienza utente difficile impedisce ai visitatori di trovare ciò che cercano.",
+    icon: AtSign
   },
   {
     title: "Con Visionabile, ottieni un sito web completamente riprogettato, moderno e pronto all'uso in tempi record.",
@@ -66,22 +71,33 @@ const Features = () => {
           Ci pensiamo noi. Con Visionabile puoi dire per sempre addio a:
         </p>
         
-        <Accordion type="single" collapsible className="w-full space-y-4">
-          {features.slice(0, 4).map((feature, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
-              className="reveal animate-fade-in border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm"
-              style={{ animationDelay: `${index * 100 + 200}ms` }}
-            >
-              <AccordionTrigger className="px-4 py-3 hover:no-underline">
-                <div className="text-left font-medium text-gray-900">{feature.title}</div>
-              </AccordionTrigger>
-              <AccordionContent className="px-4 pb-3 pt-0 text-gray-600">
-                {feature.description}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+        <Accordion type="single" collapsible className="w-full space-y-4" defaultValue="item-0">
+          {features.slice(0, 4).map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <AccordionItem 
+                key={index} 
+                value={`item-${index}`}
+                className="reveal animate-fade-in border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm py-2"
+                style={{ animationDelay: `${index * 100 + 200}ms` }}
+              >
+                <AccordionTrigger className="px-4 py-3 hover:no-underline text-[15px]">
+                  <span className="flex items-center gap-3">
+                    <Icon
+                      size={16}
+                      strokeWidth={2}
+                      className="shrink-0 opacity-60"
+                      aria-hidden="true"
+                    />
+                    <span className="font-medium text-gray-900">{feature.title}</span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="px-4 pb-3 pt-0 ps-11 text-gray-600">
+                  {feature.description}
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
         </Accordion>
         
         <div 
