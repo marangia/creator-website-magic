@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 import Button from './Button';
 
@@ -96,7 +97,7 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
                 </div>
                 
                 <div className="mt-8 py-10 border-t border-b border-gray-200">
-                  <div className="w-full h-20 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <div className="w-full h-[400px] bg-gray-100 rounded-lg flex items-center justify-center">
                     <p className="text-xs text-gray-400">Mobile preview for {category}</p>
                   </div>
                 </div>
