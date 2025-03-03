@@ -30,6 +30,25 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   const [showRightShadow, setShowRightShadow] = useState(true); // Always show right shadow at first
   const itemsPerView = 6; // Display 6 items at a time
   const [scrollAmount, setScrollAmount] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the device is mobile
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
 
   const handleTabChange = (categoryId: string) => {
     setActiveTab(categoryId);
@@ -123,12 +142,12 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   return (
     <div className="container py-12">
       <div className="relative" ref={tabContainerRef}>
-        {/* Left scroll arrow */}
-        {showLeftShadow && (
+        {/* Left scroll arrow - only show on desktop */}
+        {showLeftShadow && !isMobile && (
           <Button 
             variant="outline" 
             size="icon" 
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border-gray-200 rounded-full"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border-gray-200 rounded-full hidden md:flex"
             onClick={scrollLeft}
             aria-label="Scroll left"
           >
@@ -155,7 +174,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
                 className={`relative whitespace-nowrap px-4 py-2 text-base md:text-lg transition-all duration-300 tab-underline ${
                   activeTab === category.id 
                     ? 'text-primary-600 font-semibold active' 
-                    : 'text-gray-500 hover:text-gray-800'
+                    : 'text-gray-500 hover:text-gray-800 border-b border-gray-200'
                 }`}
                 style={{
                   width: `calc(100% / ${itemsPerView})`, // Make all buttons equal width
@@ -174,12 +193,12 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
           <div className="absolute right-0 top-0 bottom-2 w-12 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent"></div>
         )}
         
-        {/* Right scroll arrow */}
-        {showRightShadow && (
+        {/* Right scroll arrow - only show on desktop */}
+        {showRightShadow && !isMobile && (
           <Button 
             variant="outline" 
             size="icon" 
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border-gray-200 rounded-full"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border-gray-200 rounded-full hidden md:flex"
             onClick={scrollRight}
             aria-label="Scroll right"
           >
