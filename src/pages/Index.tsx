@@ -218,7 +218,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mb-16">
             {/* Benefit 1 */}
-            <div className="flex items-start gap-4 reveal animate-fade-in">
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-lg reveal animate-fade-in">
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Scissors size={28} className="text-primary-600" />
@@ -233,7 +233,7 @@ const Index = () => {
             </div>
             
             {/* Benefit 2 */}
-            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-lg reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Scissors size={28} className="text-primary-600" />
@@ -248,7 +248,7 @@ const Index = () => {
             </div>
             
             {/* Benefit 3 */}
-            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-lg reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Scissors size={28} className="text-primary-600" />
@@ -263,7 +263,7 @@ const Index = () => {
             </div>
             
             {/* Benefit 4 */}
-            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-lg reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Scissors size={28} className="text-primary-600" />
@@ -278,7 +278,7 @@ const Index = () => {
             </div>
             
             {/* Benefit 5 */}
-            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-lg reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Scissors size={28} className="text-primary-600" />
@@ -293,7 +293,7 @@ const Index = () => {
             </div>
             
             {/* Benefit 6 */}
-            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '500ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-lg reveal animate-fade-in" style={{ animationDelay: '500ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Scissors size={28} className="text-primary-600" />
