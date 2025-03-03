@@ -8,6 +8,7 @@ import CategoryTabs from '@/components/CategoryTabs';
 import WebsitePreview from '@/components/WebsitePreview';
 import Features from '@/components/Features';
 import Button from '@/components/Button';
+import { Search, FileText, ThumbsUp } from 'lucide-react';
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('estetista');
@@ -145,6 +146,62 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        
+        {/* Come funziona Section */}
+        <section className="container py-20 bg-gray-50">
+          <div className="text-center max-w-3xl mx-auto mb-16 reveal animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Come funziona
+            </h2>
+            <p className="text-lg text-gray-600">
+              Ci pensiamo noi. Con <span className="text-primary-600 font-semibold">Visionabile</span> puoi dire <span className="text-primary-600 font-semibold">per sempre addio</span> a
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center p-6 reveal animate-fade-in">
+              <div className="bg-primary-100 p-4 rounded-full mb-6">
+                <Search size={32} className="text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Richiedi l'analisi gratuita del tuo sito</h3>
+              <p className="text-gray-600">
+                Ti inviamo su WhatsApp o email un'analisi completa del tuo attuale sito ma soprattutto soluzioni migliorative
+              </p>
+            </div>
+            
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center p-6 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <div className="bg-primary-100 p-4 rounded-full mb-6">
+                <FileText size={32} className="text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Ricevi la nostra proposta</h3>
+              <p className="text-gray-600">
+                Creiamo il tuo nuovo sito entro 24 ore utilizzando tecnologie moderne, pronto ed ottimizzato per trasformare i visitatori in clienti
+              </p>
+            </div>
+            
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center p-6 reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <div className="bg-primary-100 p-4 rounded-full mb-6">
+                <ThumbsUp size={32} className="text-primary-600" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Decidi se è adatto a te</h3>
+              <p className="text-gray-600">
+                Se il sito ti piace, lo compri (ad un prezzo imbattibile). Nessun rischio. Nessun abbonamento. Nessuna attesa
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex justify-center reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
+            <Button 
+              variant="primary" 
+              size="lg"
+            >
+              Richiedi analisi gratuita
+            </Button>
           </div>
         </section>
         
