@@ -38,7 +38,7 @@ const TrustedBy = () => {
   return (
     <section className="mx-[60px] py-[30px]">
       <div className="container mx-auto">
-        <h3 className="text-gray-500 text-lg mb-8 font-semibold text-left font-onest">Trusted by:</h3>
+        <h3 className="text-gray-500 text-lg mb-8 font-normal text-left font-onest">Trusted by:</h3>
         
         <div className="w-full overflow-hidden">
           <div ref={scrollRef} className="inline-flex space-x-[24px]" style={{
