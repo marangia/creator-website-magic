@@ -43,7 +43,7 @@ const TrustedBy = () => {
   return (
     <section className="py-16 border-t border-gray-100 mx-[60px]">
       <div className="container mx-auto">
-        <h3 className="text-gray-500 text-lg mb-16 font-semibold text-left font-onest">Trusted by:</h3>
+        <h3 className="text-gray-500 text-lg mb-8 font-semibold text-left font-onest">Trusted by:</h3>
         
         <div className="w-full overflow-hidden">
           <div 
