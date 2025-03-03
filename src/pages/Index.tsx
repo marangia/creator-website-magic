@@ -191,7 +191,7 @@ const Index = () => {
             <div className="reveal animate-fade-in" style={{
             animationDelay: '100ms'
           }}>
-              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[500px] w-full max-w-[600px] mx-auto">
+              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[500px] w-full max-w-[500px] mx-auto">
                 <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
                   <p className="text-gray-500">Image placeholder (600x500)</p>
                 </div>
