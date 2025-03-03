@@ -52,7 +52,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left side - Image */}
             <div className="reveal animate-fade-in">
-              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[300px] w-full max-w-[600px] mx-auto">
+              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[600px] w-full max-w-[600px] mx-auto">
                 <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
                   <p className="text-gray-500">Image placeholder (600x500)</p>
                 </div>
