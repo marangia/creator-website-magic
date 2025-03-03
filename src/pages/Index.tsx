@@ -54,7 +54,7 @@ const Index = () => {
             <div className="reveal animate-fade-in">
               <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[400px] w-full max-w-[400px] mx-auto">
                 <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
-                  <p className="text-gray-500">Image placeholder (600x500)</p>
+                  <p className="text-gray-500">Image placeholder (400x400)</p>
                 </div>
               </div>
             </div>
