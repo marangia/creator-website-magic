@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -223,7 +224,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in">
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Eye size={28} className="text-primary-600" />
+                  <Eye size={28} className="text-gray-600" />
                 </div>
               </div>
               <div>
@@ -238,7 +239,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <SearchCheck size={28} className="text-primary-600" />
+                  <SearchCheck size={28} className="text-gray-600" />
                 </div>
               </div>
               <div>
@@ -253,7 +254,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Sparkles size={28} className="text-primary-600" />
+                  <Sparkles size={28} className="text-gray-600" />
                 </div>
               </div>
               <div>
@@ -268,7 +269,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Clock size={28} className="text-primary-600" />
+                  <Clock size={28} className="text-gray-600" />
                 </div>
               </div>
               <div>
@@ -283,7 +284,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Headphones size={28} className="text-primary-600" />
+                  <Headphones size={28} className="text-gray-600" />
                 </div>
               </div>
               <div>
@@ -298,7 +299,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '500ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Tag size={28} className="text-primary-600" />
+                  <Tag size={28} className="text-gray-600" />
                 </div>
               </div>
               <div>
