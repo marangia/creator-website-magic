@@ -51,6 +51,70 @@ const Index = () => {
         <PromoText />
         <CategoryTabs onCategoryChange={handleCategoryChange} />
         <WebsitePreview category={selectedCategory} />
+        
+        {/* New Showcase Section */}
+        <section className="container py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left side - Image */}
+            <div className="reveal animate-fade-in">
+              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[500px] w-full max-w-[600px] mx-auto">
+                <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
+                  <p className="text-gray-500">Image placeholder (600x500)</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right side - Content */}
+            <div className="space-y-6 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <h2 className="text-3xl md:text-4xl font-bold">
+                Il tuo sito attuale non genera abbastanza contatti o vendite? Ci pensiamo noi!
+              </h2>
+              
+              <p className="text-lg text-gray-600">
+                Con Visionabile puoi dire per sempre addio a:
+              </p>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <div className="rounded-full bg-green-100 p-1 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-green-600">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Design vecchio che non valorizza la tua attività</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <div className="rounded-full bg-green-100 p-1 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-green-600">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Tempi di caricamento lenti che fanno scappare i clienti</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <div className="rounded-full bg-green-100 p-1 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-green-600">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Contenuti poco chiari che non convincono e convertono</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <div className="rounded-full bg-green-100 p-1 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-green-600">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <span>Navigazione complicata che frustra gli utenti</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        
         <Features />
 
         {/* CTA Section */}
