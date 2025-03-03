@@ -7,6 +7,7 @@ import CategoryTabs from '@/components/CategoryTabs';
 import WebsitePreview from '@/components/WebsitePreview';
 import Features from '@/components/Features';
 import Button from '@/components/Button';
+import Testimonials from '@/components/Testimonials';
 import { Search, FileText, ThumbsUp, Scissors } from 'lucide-react';
 
 const Index = () => {
@@ -309,6 +310,9 @@ const Index = () => {
         </section>
         
         <Features />
+
+        {/* Add Testimonials section */}
+        <Testimonials />
 
         {/* CTA Section */}
         <section className="container py-20">
