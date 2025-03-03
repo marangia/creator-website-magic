@@ -36,8 +36,8 @@ const TrustedBy = () => {
   }, []);
 
   return (
-    <section className="py-[30px]">
-      <div className="container mx-auto px-4 w-full md:max-w-full">
+    <section className="py-[30px] w-full">
+      <div className="container mx-auto px-4">
         <h3 className="text-gray-500 text-lg mb-8 font-normal text-left font-onest">Trusted by:</h3>
         
         <div className="w-full overflow-hidden">
