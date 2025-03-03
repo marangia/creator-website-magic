@@ -15,13 +15,10 @@ const TestimonialCard = ({ text, author, profession, rating }: TestimonialCardPr
       <div className="bg-[#222222] text-white p-6 rounded-[16px] mb-4 h-64 flex flex-col">
         <p className="flex-grow">{text}</p>
         <div className="flex items-center mt-2">
-          {Array(5).fill(0).map((_, i) => (
-            <Star
-              key={i}
-              size={16}
-              className={`${i < rating ? 'text-[#F9BD3F] fill-[#F9BD3F]' : 'text-gray-500'}`}
-            />
-          ))}
+          <Star
+            size={16}
+            className="text-[#F9BD3F] fill-[#F9BD3F]"
+          />
           <span className="ml-2">{rating.toFixed(1)}</span>
         </div>
       </div>
