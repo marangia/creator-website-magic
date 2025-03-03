@@ -31,7 +31,7 @@ const TrustedBy = () => {
       cancelAnimationFrame(animationId);
     };
   }, []);
-  return <section className="pt-40 pb-16 mx-[60px] py-0">
+  return <section className="pt-40 pb-16 mx-[60px] py-[60px]">
       <div className="container mx-auto">
         <h3 className="text-gray-500 text-lg mb-8 font-semibold text-left font-onest">Trusted by:</h3>
         
