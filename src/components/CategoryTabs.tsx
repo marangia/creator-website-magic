@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 
 const categories = [
@@ -5,8 +6,14 @@ const categories = [
   { id: 'elettricista', label: 'Elettricista' },
   { id: 'ristorante', label: 'Ristorante' },
   { id: 'hotel', label: 'Hotel' },
-  { id: 'immobile', label: 'Immobile' },
+  { id: 'immobiliare', label: 'Immobiliare' },
   { id: 'bottega', label: 'Bottega' },
+  { id: 'bar', label: 'Bar' },
+  { id: 'negozio', label: 'Negozio' },
+  { id: 'idraulico', label: 'Idraulico' },
+  { id: 'gommista', label: 'Gommista' },
+  { id: 'barbiere', label: 'Barbiere' },
+  { id: 'clinica', label: 'Clinica' },
 ];
 
 interface CategoryTabsProps {
