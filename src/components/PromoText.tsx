@@ -1,3 +1,4 @@
+
 import React from 'react';
 const PromoText = () => {
   return <section className="py-16">
@@ -6,8 +7,6 @@ const PromoText = () => {
           Con Visionabile, ottieni <span className="text-purple-600">un sito web</span> completo, 
           moderno e <span className="text-purple-600">pronto all'uso in tempi record</span>.
         </h2>
-        
-        <p className="text-lg text-gray-600 mt-4">d</p>
         
         <div className="mt-8 flex justify-center">
           <div className="w-[114px] h-[86px] rounded-xl overflow-hidden shadow-lg">
