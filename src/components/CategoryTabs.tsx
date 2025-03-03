@@ -140,7 +140,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   }, []);
 
   return (
-    <div className="container py-12">
+    <div className="w-full px-4 py-12">
       <div className="relative" ref={tabContainerRef}>
         {/* Left scroll arrow - only show on desktop */}
         {showLeftShadow && !isMobile && (
@@ -177,9 +177,9 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
                     : 'text-gray-500 hover:text-gray-800 border-b border-gray-200'
                 }`}
                 style={{
-                  width: `calc(100% / ${itemsPerView})`, // Make all buttons equal width
-                  minWidth: '120px', // Ensure minimum width for readability
-                  maxWidth: '180px'  // Maximum width to keep consistency
+                  width: isMobile ? '100%' : `calc(100% / ${itemsPerView})`,
+                  minWidth: isMobile ? '280px' : '120px', // 280px on mobile, 120px on desktop
+                  maxWidth: isMobile ? '100%' : '180px'  // 100% on mobile, 180px on desktop
                 }}
               >
                 {category.label}
