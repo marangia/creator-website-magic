@@ -16,7 +16,7 @@ const Button = ({
   className,
   ...props
 }: ButtonProps) => {
-  const baseStyles = "rounded-md font-medium transition-all duration-300 flex items-center justify-center";
+  const baseStyles = "rounded-lg font-medium transition-all duration-300 flex items-center justify-center button-hover-effect";
   
   const variants = {
     primary: "bg-orange-500 text-white hover:bg-orange-600",
@@ -27,7 +27,7 @@ const Button = ({
   const sizes = {
     sm: "px-3 py-1.5 text-sm",
     md: "px-4 py-2 text-base",
-    lg: "px-5 py-2.5 text-base"
+    lg: "px-6 py-3 text-lg"
   };
 
   return (
