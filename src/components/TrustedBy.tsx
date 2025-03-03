@@ -41,7 +41,7 @@ const TrustedBy = () => {
   }, []);
 
   return (
-    <section className="pt-50 pb-16 mx-[60px]">
+    <section className="pt-40 pb-16 mx-[60px]">
       <div className="container mx-auto">
         <h3 className="text-gray-500 text-lg mb-8 font-semibold text-left font-onest">Trusted by:</h3>
         

@@ -30,7 +30,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="pt-32 pb-40 overflow-hidden">
+    <section className="pt-32 pb-0 overflow-hidden">
       <div className="container mx-auto max-w-5xl">
         <div className="space-y-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
@@ -62,8 +62,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Background design elements - removed as per screenshot */}
     </section>
   );
 };
