@@ -65,7 +65,7 @@ const Index = () => {
           }}>
               <h2 className="text-3xl md:text-4xl font-bold">Identikit di un sito che funziona</h2>
               
-              <p className="text-lg text-gray-600">Dopo aver soddisfatto migliaia di attività, ecco cosa ti farà vincere online:</p>
+              <p className="text-lg text-gray-600">Zero rischi, nessuna attesa, niente anticipi</p>
               
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
