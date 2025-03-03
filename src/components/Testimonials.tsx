@@ -22,8 +22,10 @@ const TestimonialCard = ({ text, author, profession, rating }: TestimonialCardPr
           <span className="ml-2">{rating.toFixed(1)}</span>
         </div>
       </div>
-      <h3 className="font-bold">{author}</h3>
-      <p className="text-gray-500 text-sm">{profession}</p>
+      <div className="text-center">
+        <h3 className="font-bold">{author}</h3>
+        <p className="text-gray-500 text-sm">{profession}</p>
+      </div>
     </div>
   );
 };
