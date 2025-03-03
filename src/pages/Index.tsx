@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import TrustedBy from '@/components/TrustedBy';
+import PromoText from '@/components/PromoText';
 import CategoryTabs from '@/components/CategoryTabs';
 import WebsitePreview from '@/components/WebsitePreview';
 import Features from '@/components/Features';
@@ -45,6 +47,8 @@ const Index = () => {
       
       <main>
         <Hero />
+        <TrustedBy />
+        <PromoText />
         <CategoryTabs onCategoryChange={handleCategoryChange} />
         <WebsitePreview category={selectedCategory} />
         <Features />
