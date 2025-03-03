@@ -115,7 +115,7 @@ const Index = () => {
               Come funziona
             </h2>
             <p className="text-lg text-gray-600">
-              Ci pensiamo noi. Con <span className="text-primary-600 font-semibold">Visionabile</span> puoi dire <span className="text-primary-600 font-semibold">per sempre addio</span> a
+              Zero rischi, nessuna attesa, niente anticipi
             </p>
           </div>
           
@@ -209,7 +209,7 @@ const Index = () => {
               Perché scegliere <span className="text-primary-600">Visionabile</span>
             </h2>
             <p className="text-lg text-gray-600">
-              Ci pensiamo noi. Con <span className="font-semibold">Visionabile</span> puoi dire <span className="font-semibold">per sempre addio</span> a:
+              Zero rischi, nessuna attesa, niente anticipi
             </p>
           </div>
           
@@ -331,7 +331,7 @@ const Index = () => {
                 </h2>
                 
                 <p className="text-lg">
-                  Ci pensiamo noi. Con <span className="font-semibold">Visionabile</span> puoi dire <span className="font-semibold">per sempre addio</span> a (esempio)
+                  Zero rischi, nessuna attesa, niente anticipi
                 </p>
               </div>
               
