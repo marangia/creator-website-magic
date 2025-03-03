@@ -11,41 +11,33 @@ import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { Search, FileText, ThumbsUp, Eye, SearchCheck, Sparkles, Clock, Headphones, Tag } from 'lucide-react';
-
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('estetista');
-
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId);
   };
-
   useEffect(() => {
     // Intersection Observer for reveal animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     const elements = document.querySelectorAll('.reveal');
-    elements.forEach((el) => {
+    elements.forEach(el => {
       observer.observe(el);
     });
-
     return () => {
-      elements.forEach((el) => {
+      elements.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
-  return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+  return <div className="min-h-screen bg-white overflow-x-hidden">
       <Header />
       
       <main>
@@ -68,14 +60,12 @@ const Index = () => {
             </div>
             
             {/* Right side - Content */}
-            <div className="space-y-6 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Il tuo sito attuale non genera abbastanza contatti o vendite? Ci pensiamo noi!
-              </h2>
+            <div className="space-y-6 reveal animate-fade-in" style={{
+            animationDelay: '100ms'
+          }}>
+              <h2 className="text-3xl md:text-4xl font-bold">Identikit di un sito che funziona</h2>
               
-              <p className="text-lg text-gray-600">
-                Con Visionabile puoi dire per sempre addio a:
-              </p>
+              <p className="text-lg text-gray-600">Dopo aver soddisfatto migliaia di attività, ecco cosa ti farà vincere online:</p>
               
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -84,7 +74,7 @@ const Index = () => {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Design vecchio che non valorizza la tua attività</span>
+                  <span>Design moderno e ottimizzato per dispositivi mobili</span>
                 </li>
                 
                 <li className="flex items-start gap-3">
@@ -93,7 +83,7 @@ const Index = () => {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Tempi di caricamento lenti che fanno scappare i clienti</span>
+                  <span>Navigazione semplice e tempi di caricamento brevi</span>
                 </li>
                 
                 <li className="flex items-start gap-3">
@@ -102,7 +92,7 @@ const Index = () => {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Contenuti poco chiari che non convincono e convertono</span>
+                  <span>Contenuti chiari, aggiornati e pensati per vendere</span>
                 </li>
                 
                 <li className="flex items-start gap-3">
@@ -111,7 +101,7 @@ const Index = () => {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Navigazione complicata che frustra gli utenti</span>
+                  <span>Strumenti di intelligenza artificiale in grado di trasformare i tuoi visitatori in clienti</span>
                 </li>
               </ul>
             </div>
@@ -142,7 +132,9 @@ const Index = () => {
             </div>
             
             {/* Step 2 */}
-            <div className="flex flex-col items-start text-left p-6 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="flex flex-col items-start text-left p-6 reveal animate-fade-in" style={{
+            animationDelay: '100ms'
+          }}>
               <div className="bg-primary-100 p-4 rounded-full mb-6">
                 <FileText size={32} className="text-primary-600" />
               </div>
@@ -153,7 +145,9 @@ const Index = () => {
             </div>
             
             {/* Step 3 */}
-            <div className="flex flex-col items-start text-left p-6 reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="flex flex-col items-start text-left p-6 reveal animate-fade-in" style={{
+            animationDelay: '200ms'
+          }}>
               <div className="bg-primary-100 p-4 rounded-full mb-6">
                 <ThumbsUp size={32} className="text-primary-600" />
               </div>
@@ -164,11 +158,10 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex justify-center reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
-            <Button 
-              variant="primary" 
-              size="lg"
-            >
+          <div className="flex justify-center reveal animate-fade-in" style={{
+          animationDelay: '300ms'
+        }}>
+            <Button variant="primary" size="lg">
               Richiedi analisi gratuita
             </Button>
           </div>
@@ -197,7 +190,9 @@ const Index = () => {
             </div>
             
             {/* Right side - Image */}
-            <div className="reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="reveal animate-fade-in" style={{
+            animationDelay: '100ms'
+          }}>
               <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[500px] w-full max-w-[600px] mx-auto">
                 <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
                   <p className="text-gray-500">Image placeholder (600x500)</p>
@@ -235,7 +230,9 @@ const Index = () => {
             </div>
             
             {/* Benefit 2 */}
-            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{
+            animationDelay: '100ms'
+          }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <SearchCheck size={28} className="text-gray-600" />
@@ -250,7 +247,9 @@ const Index = () => {
             </div>
             
             {/* Benefit 3 */}
-            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{
+            animationDelay: '200ms'
+          }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Sparkles size={28} className="text-gray-600" />
@@ -265,7 +264,9 @@ const Index = () => {
             </div>
             
             {/* Benefit 4 */}
-            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{
+            animationDelay: '300ms'
+          }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Clock size={28} className="text-gray-600" />
@@ -280,7 +281,9 @@ const Index = () => {
             </div>
             
             {/* Benefit 5 */}
-            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{
+            animationDelay: '400ms'
+          }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Headphones size={28} className="text-gray-600" />
@@ -295,7 +298,9 @@ const Index = () => {
             </div>
             
             {/* Benefit 6 */}
-            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '500ms' }}>
+            <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{
+            animationDelay: '500ms'
+          }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
                   <Tag size={28} className="text-gray-600" />
@@ -331,7 +336,9 @@ const Index = () => {
               </div>
               
               {/* Right side - Form */}
-              <div className="reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <div className="reveal animate-fade-in" style={{
+              animationDelay: '100ms'
+            }}>
                 <ContactForm />
               </div>
             </div>
@@ -350,16 +357,16 @@ const Index = () => {
                 Pronto a trasformare la tua presenza online?
               </h2>
               
-              <p className="text-lg text-white/90 mb-8 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <p className="text-lg text-white/90 mb-8 reveal animate-fade-in" style={{
+              animationDelay: '100ms'
+            }}>
                 Ottieni un sito web professionale, veloce e ottimizzato per convertire visitatori in clienti. Senza nessun rischio.
               </p>
               
-              <div className="reveal animate-fade-in flex justify-center" style={{ animationDelay: '200ms' }}>
-                <Button 
-                  variant="primary" 
-                  size="lg" 
-                  className="bg-white text-primary-700 hover:bg-white/90"
-                >
+              <div className="reveal animate-fade-in flex justify-center" style={{
+              animationDelay: '200ms'
+            }}>
+                <Button variant="primary" size="lg" className="bg-white text-primary-700 hover:bg-white/90">
                   Crea il tuo sito gratuitamente
                 </Button>
               </div>
@@ -369,8 +376,6 @@ const Index = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
