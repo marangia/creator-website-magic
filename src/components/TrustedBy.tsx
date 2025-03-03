@@ -36,15 +36,15 @@ const TrustedBy = () => {
   }, []);
 
   return (
-    <section className="mx-[60px] py-[30px]">
-      <div className="container mx-auto">
+    <section className="py-[30px]">
+      <div className="container mx-auto px-4 w-full md:max-w-full">
         <h3 className="text-gray-500 text-lg mb-8 font-normal text-left font-onest">Trusted by:</h3>
         
         <div className="w-full overflow-hidden">
           <div ref={scrollRef} className="inline-flex space-x-[24px]" style={{
           whiteSpace: 'nowrap'
         }}>
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(index => <div key={index} className="inline-block h-[68px] w-32">
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(index => <div key={index} className="inline-block h-[68px] w-[280px] md:w-32">
                 <div className="bg-gray-100 w-full h-full rounded flex items-center justify-center">
                   <div className="text-gray-400 text-xs">Logo Placeholder</div>
                 </div>
