@@ -52,7 +52,7 @@ const Index = () => {
         <CategoryTabs onCategoryChange={handleCategoryChange} />
         <WebsitePreview category={selectedCategory} />
         
-        {/* New Showcase Section */}
+        {/* Showcase Section */}
         <section className="container py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left side - Image */}
@@ -111,6 +111,39 @@ const Index = () => {
                   <span>Navigazione complicata che frustra gli utenti</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </section>
+        
+        {/* Chi siamo Section */}
+        <section className="container py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Left side - Content */}
+            <div className="space-y-6 reveal animate-fade-in">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Chi siamo
+              </h2>
+              
+              <p className="text-lg text-gray-600 mb-4">
+                Siamo un team di professionisti e innovatori, stanchi dei soliti metodi di lavoro lenti e costosi.
+              </p>
+              
+              <p className="text-lg text-gray-600 mb-4">
+                <span className="font-semibold">Con Visionabile,</span> reinventiamo il modo in cui le aziende adottano soluzioni digitali: <span className="font-semibold">nessun rischio, nessuna attesa, nessuna promessa non mantenuta.</span>
+              </p>
+              
+              <p className="text-lg text-gray-600">
+                Creiamo soluzioni su misura che paghi solo se adatte a te e alla tua attività.
+              </p>
+            </div>
+            
+            {/* Right side - Image */}
+            <div className="reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[500px] w-full max-w-[600px] mx-auto">
+                <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
+                  <p className="text-gray-500">Image placeholder (600x500)</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
