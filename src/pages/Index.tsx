@@ -8,6 +8,7 @@ import WebsitePreview from '@/components/WebsitePreview';
 import Features from '@/components/Features';
 import Button from '@/components/Button';
 import Testimonials from '@/components/Testimonials';
+import ContactForm from '@/components/ContactForm';
 import { Search, FileText, ThumbsUp, Scissors } from 'lucide-react';
 
 const Index = () => {
@@ -311,8 +312,30 @@ const Index = () => {
         
         <Features />
 
-        {/* Add Testimonials section */}
         <Testimonials />
+
+        {/* Contact Form Section */}
+        <section className="py-20 bg-[#FFFCF6]">
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Left side - Content */}
+              <div className="space-y-6 reveal animate-fade-in">
+                <h2 className="text-3xl md:text-4xl font-bold">
+                  Prova il servizio <span className="text-primary-600">Gratuitamente</span>
+                </h2>
+                
+                <p className="text-lg">
+                  Ci pensiamo noi. Con <span className="font-semibold">Visionabile</span> puoi dire <span className="font-semibold">per sempre addio</span> a (esempio)
+                </p>
+              </div>
+              
+              {/* Right side - Form */}
+              <div className="reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+                <ContactForm />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="container py-20">
