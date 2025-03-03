@@ -11,7 +11,7 @@ const PromoText = () => {
         </h2>
         
         <div className="mt-8 flex justify-center">
-          <div className="w-64 h-auto rounded-xl overflow-hidden shadow-lg">
+          <div className="w-[114px] h-[86px] rounded-xl overflow-hidden shadow-lg">
             <img 
               src="/lovable-uploads/8587e43e-c790-4b0b-89c4-dc281bd415e3.png" 
               alt="Visionabile smiley face" 
