@@ -10,6 +10,10 @@ const PromoText = () => {
           moderno e <span className="text-purple-600">pronto all'uso in tempi record</span>.
         </h2>
         
+        <p className="text-lg text-gray-600 mt-4">
+          Zero rischi, nessuna attesa, niente anticipi:
+        </p>
+        
         <div className="mt-8 flex justify-center">
           <div className="w-[114px] h-[86px] rounded-xl overflow-hidden shadow-lg">
             <img 
