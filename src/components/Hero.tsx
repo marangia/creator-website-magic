@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import Button from './Button';
 
@@ -31,27 +30,39 @@ const Hero = () => {
 
   return (
     <section className="pt-32 pb-20 overflow-hidden">
-      <div className="container text-center max-w-4xl mx-auto">
-        <div ref={textRef} className="space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight reveal animate-fade-in">
-            Il tuo nuovo sito, online e funzionante prima ancora di pagare
+      <div className="container mx-auto max-w-5xl">
+        <div className="space-y-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+            Il tuo nuovo sito,<br />
+            online e funzionante prima<br />
+            ancora di pagare
           </h1>
           
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
-            Dai alla tua attività la presenza online che merita: realizziamo il tuo sito <span className="text-primary-600 font-medium">GRATIS</span>, pronto in meno 24 ore e decidi solo dopo se acquistarlo.
+          <p className="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto">
+            Dai alla tua attività la presenza online che merita: realizziamo il tuo<br />
+            sito <span className="text-purple-600 font-semibold">GRATIS</span>, pronto in meno 24 ore e decidi solo dopo se acquistarlo.
           </p>
           
-          <div className="pt-6 flex justify-center reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
-            <Button size="lg">
+          <div className="flex justify-center gap-4 pt-4">
+            <Button 
+              variant="primary" 
+              size="lg" 
+              className="bg-orange-500 hover:bg-orange-600 text-white"
+            >
               Crea il tuo sito
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-gray-300 text-gray-800 hover:bg-gray-50"
+            >
+              Richiedi l'analisi gratuita
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Background design elements */}
-      <div className="absolute top-20 left-0 w-64 h-64 bg-primary-100 rounded-full filter blur-3xl opacity-30 -z-10 animate-float"></div>
-      <div className="absolute top-40 right-0 w-96 h-96 bg-orange-100 rounded-full filter blur-3xl opacity-30 -z-10 animate-float" style={{ animationDelay: '2s' }}></div>
+      {/* Background design elements - removed as per screenshot */}
     </section>
   );
 };

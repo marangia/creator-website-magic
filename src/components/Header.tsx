@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
 import { Menu } from 'lucide-react';
@@ -27,26 +28,34 @@ const Header = () => {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <a href="/" className="flex items-center space-x-2">
+        <a href="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/9c85c84a-b483-473c-acaa-daa1ac8a3576.png" 
+            src="/lovable-uploads/625c88bd-eb17-4512-a135-4d485cbd63d6.png" 
             alt="Visionabile" 
-            className="h-10 w-auto" 
+            className="h-12" 
           />
         </a>
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
-            Funzionalità
+          <a href="#come-funziona" className="text-gray-800 hover:text-primary-600 transition-colors duration-200">
+            Come funziona
           </a>
-          <a href="#examples" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
-            Esempi
+          <a href="#chi-siamo" className="text-gray-800 hover:text-primary-600 transition-colors duration-200">
+            Chi siamo
           </a>
-          <a href="#pricing" className="text-gray-600 hover:text-primary-600 transition-colors duration-200">
-            Prezzi
+          <a href="#vantaggi" className="text-gray-800 hover:text-primary-600 transition-colors duration-200">
+            Vantaggi
           </a>
-          <Button>Crea il tuo sito</Button>
+          <a href="#richiedi-analisi" className="text-gray-800 hover:text-primary-600 transition-colors duration-200">
+            Richiedi analisi Gratuita
+          </a>
+          <Button 
+            variant="primary" 
+            className="bg-orange-500 text-white hover:bg-orange-600 ml-4"
+          >
+            Crea il tuo sito
+          </Button>
         </nav>
 
         {/* Mobile menu button */}
@@ -66,27 +75,39 @@ const Header = () => {
       >
         <div className="container py-4 flex flex-col space-y-4">
           <a 
-            href="#features" 
-            className="text-gray-600 hover:text-primary-600 transition-colors px-4 py-2"
+            href="#come-funziona" 
+            className="text-gray-800 hover:text-primary-600 transition-colors px-4 py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Funzionalità
+            Come funziona
           </a>
           <a 
-            href="#examples" 
-            className="text-gray-600 hover:text-primary-600 transition-colors px-4 py-2"
+            href="#chi-siamo" 
+            className="text-gray-800 hover:text-primary-600 transition-colors px-4 py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Esempi
+            Chi siamo
           </a>
           <a 
-            href="#pricing" 
-            className="text-gray-600 hover:text-primary-600 transition-colors px-4 py-2"
+            href="#vantaggi" 
+            className="text-gray-800 hover:text-primary-600 transition-colors px-4 py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Prezzi
+            Vantaggi
           </a>
-          <Button className="w-full">Crea il tuo sito</Button>
+          <a 
+            href="#richiedi-analisi" 
+            className="text-gray-800 hover:text-primary-600 transition-colors px-4 py-2"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Richiedi analisi Gratuita
+          </a>
+          <Button 
+            variant="primary" 
+            className="bg-orange-500 text-white hover:bg-orange-600 w-full"
+          >
+            Crea il tuo sito
+          </Button>
         </div>
       </div>
     </header>
