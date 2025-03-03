@@ -5,7 +5,7 @@ const TrustedBy = () => {
   return (
     <section className="py-16 border-t border-gray-100">
       <div className="container mx-auto">
-        <h3 className="text-gray-500 text-lg mb-10 text-center">Trusted by:</h3>
+        <h3 className="text-gray-500 text-lg mb-10 text-center font-onest">Trusted by:</h3>
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {[1, 2, 3, 4, 5, 6].map((index) => (
