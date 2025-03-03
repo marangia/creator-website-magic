@@ -153,8 +153,7 @@ const ContactForm = () => {
         
         <Button 
           type="submit" 
-          variant="primary" 
-          className="w-full py-6 text-base font-medium"
+          className="w-full py-6 text-base font-medium bg-orange-500 hover:bg-orange-600 text-white"
           disabled={isLoading}
         >
           {isLoading ? "Invio in corso..." : "Richiedi analisi gratuita"}
