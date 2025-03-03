@@ -16,7 +16,6 @@ const Footer = () => {
                 alt="Visionabile" 
                 className="h-12 w-auto" 
               />
-              <span className="text-2xl font-bold">Visionabile</span>
             </div>
             
             {/* Contact Info */}
