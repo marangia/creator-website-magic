@@ -25,7 +25,8 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   const tabsRef = useRef<HTMLDivElement>(null);
   const tabContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftShadow, setShowLeftShadow] = useState(false);
-  const [showRightShadow, setShowRightShadow] = useState(false);
+  const [showRightShadow, setShowRightShadow] = useState(true); // Always show right shadow at first
+  const itemsPerView = 6; // Display 6 items at a time
 
   const handleTabChange = (categoryId: string) => {
     setActiveTab(categoryId);
@@ -90,7 +91,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
           className="flex overflow-x-auto py-1 pb-2 scrollbar-hide scroll-smooth"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          <div className="flex space-x-6 md:space-x-8 min-w-min px-4 mx-auto">
+          <div className="flex space-x-6 md:space-x-8 px-4 mx-auto">
             {categories.map((category) => (
               <button
                 id={`tab-${category.id}`}
@@ -101,6 +102,11 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
                     ? 'text-primary-600 font-semibold active' 
                     : 'text-gray-500 hover:text-gray-800'
                 }`}
+                style={{
+                  width: `calc(100% / ${itemsPerView})`, // Make all buttons equal width
+                  minWidth: '120px', // Ensure minimum width for readability
+                  maxWidth: '180px'  // Maximum width to keep consistency
+                }}
               >
                 {category.label}
               </button>
