@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -7,7 +8,7 @@ import CategoryTabs from '@/components/CategoryTabs';
 import WebsitePreview from '@/components/WebsitePreview';
 import Features from '@/components/Features';
 import Button from '@/components/Button';
-import { Search, FileText, ThumbsUp } from 'lucide-react';
+import { Search, FileText, ThumbsUp, Scissors } from 'lucide-react';
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('estetista');
@@ -201,6 +202,110 @@ const Index = () => {
             >
               Richiedi analisi gratuita
             </Button>
+          </div>
+        </section>
+        
+        {/* Perché scegliere Visionabile Section */}
+        <section className="container py-20">
+          <div className="text-center max-w-3xl mx-auto mb-16 reveal animate-fade-in">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Perché scegliere <span className="text-primary-600">Visionabile</span>
+            </h2>
+            <p className="text-lg text-gray-600">
+              Ci pensiamo noi. Con <span className="font-semibold">Visionabile</span> puoi dire <span className="font-semibold">per sempre addio</span> a:
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mb-16">
+            {/* Benefit 1 */}
+            <div className="flex items-start gap-4 reveal animate-fade-in">
+              <div className="flex-shrink-0">
+                <div className="p-1">
+                  <Scissors size={28} className="text-primary-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Vedi prima, paghi dopo</h3>
+                <p className="text-gray-600">
+                  Nessun rischio, vedi e provi il tuo sito prima di pagare
+                </p>
+              </div>
+            </div>
+            
+            {/* Benefit 2 */}
+            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+              <div className="flex-shrink-0">
+                <div className="p-1">
+                  <Scissors size={28} className="text-primary-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Analisi gratuita e completa</h3>
+                <p className="text-gray-600">
+                  Scopri i problemi del tuo sito attuale senza impegno
+                </p>
+              </div>
+            </div>
+            
+            {/* Benefit 3 */}
+            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+              <div className="flex-shrink-0">
+                <div className="p-1">
+                  <Scissors size={28} className="text-primary-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Ottimizzato per le conversioni</h3>
+                <p className="text-gray-600">
+                  Siti progettati per trasformare i visitatori in clienti
+                </p>
+              </div>
+            </div>
+            
+            {/* Benefit 4 */}
+            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
+              <div className="flex-shrink-0">
+                <div className="p-1">
+                  <Scissors size={28} className="text-primary-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Tempi di consegna record</h3>
+                <p className="text-gray-600">
+                  Niente lunghe attese, il tuo sito è già pronto
+                </p>
+              </div>
+            </div>
+            
+            {/* Benefit 5 */}
+            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
+              <div className="flex-shrink-0">
+                <div className="p-1">
+                  <Scissors size={28} className="text-primary-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Supporto dedicato</h3>
+                <p className="text-gray-600">
+                  Un team di esperti a tua disposizione
+                </p>
+              </div>
+            </div>
+            
+            {/* Benefit 6 */}
+            <div className="flex items-start gap-4 reveal animate-fade-in" style={{ animationDelay: '500ms' }}>
+              <div className="flex-shrink-0">
+                <div className="p-1">
+                  <Scissors size={28} className="text-primary-600" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-2">Prezzo trasparente</h3>
+                <p className="text-gray-600">
+                  Paghi quello che ti viene promesso, senza costi o abbonamenti nascosti
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         
