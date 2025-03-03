@@ -48,10 +48,10 @@ const TrustedBy = () => {
         <div className="w-full overflow-hidden">
           <div 
             ref={scrollRef}
-            className="inline-flex space-x-[10px]"
+            className="inline-flex space-x-[24px]"
             style={{ whiteSpace: 'nowrap' }}
           >
-            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((index) => (
               <div key={index} className="inline-block h-[68px] w-32">
                 <div className="bg-gray-100 w-full h-full rounded flex items-center justify-center">
                   <div className="text-gray-400 text-xs">Logo Placeholder</div>
