@@ -1,9 +1,6 @@
-
 import React, { useEffect, useRef } from 'react';
-
 const TrustedBy = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
@@ -19,50 +16,37 @@ const TrustedBy = () => {
     const scrollWidth = scrollContainer.scrollWidth / 2;
     let animationId: number;
     let currentPosition = 0;
-
     const scroll = () => {
       currentPosition += 0.5; // Adjust speed here
       if (currentPosition >= scrollWidth) {
         currentPosition = 0;
       }
-      
       if (scrollContainer) {
         scrollContainer.style.transform = `translateX(${-currentPosition}px)`;
       }
-      
       animationId = requestAnimationFrame(scroll);
     };
-
     scroll();
-
     return () => {
       cancelAnimationFrame(animationId);
     };
   }, []);
-
-  return (
-    <section className="pt-40 pb-16 mx-[60px]">
+  return <section className="pt-40 pb-16 mx-[60px] py-[60px]">
       <div className="container mx-auto">
         <h3 className="text-gray-500 text-lg mb-8 font-semibold text-left font-onest">Trusted by:</h3>
         
         <div className="w-full overflow-hidden">
-          <div 
-            ref={scrollRef}
-            className="inline-flex space-x-[24px]"
-            style={{ whiteSpace: 'nowrap' }}
-          >
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((index) => (
-              <div key={index} className="inline-block h-[68px] w-32">
+          <div ref={scrollRef} className="inline-flex space-x-[24px]" style={{
+          whiteSpace: 'nowrap'
+        }}>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(index => <div key={index} className="inline-block h-[68px] w-32">
                 <div className="bg-gray-100 w-full h-full rounded flex items-center justify-center">
                   <div className="text-gray-400 text-xs">Logo Placeholder</div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TrustedBy;
