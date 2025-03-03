@@ -44,7 +44,7 @@ const Hero = () => {
             sito <span className="text-purple-600 font-semibold">GRATIS</span>, pronto in meno 24 ore e decidi solo dopo se acquistarlo.
           </p>
           
-          <div className="flex justify-center gap-4 pt-4">
+          <div className="flex flex-wrap justify-center gap-4 pt-4">
             <Button 
               variant="primary" 
               size="lg" 
