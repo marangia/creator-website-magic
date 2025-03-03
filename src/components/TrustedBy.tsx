@@ -1,7 +1,9 @@
 
 import React, { useEffect, useRef } from 'react';
+
 const TrustedBy = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
@@ -32,7 +34,9 @@ const TrustedBy = () => {
       cancelAnimationFrame(animationId);
     };
   }, []);
-  return <section className="pt-40 pb-16 mx-[60px] py-[30px]">
+
+  return (
+    <section className="mx-[60px] py-[30px]">
       <div className="container mx-auto">
         <h3 className="text-gray-500 text-lg mb-8 font-semibold text-left font-onest">Trusted by:</h3>
         
@@ -48,6 +52,8 @@ const TrustedBy = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default TrustedBy;
