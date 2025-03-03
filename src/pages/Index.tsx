@@ -52,7 +52,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left side - Image */}
             <div className="reveal animate-fade-in">
-              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[500px] w-full max-w-[600px] mx-auto">
+              <div className="bg-gray-100 rounded-[24px] p-[10px] overflow-hidden h-[300px] w-full max-w-[600px] mx-auto">
                 <div className="w-full h-full bg-gray-200 rounded-2xl flex items-center justify-center">
                   <p className="text-gray-500">Image placeholder (600x500)</p>
                 </div>
@@ -114,7 +114,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Come funziona
             </h2>
-            <p className="text-lg text-gray-600">Nessun rischio, zero attese, niente anticipi. Con <span className="text-primary-600">Visionabile</span>: </p>
+            <p className="text-lg text-gray-600">Nessun rischio, zero attese, niente anticipi. Con Visionabile: </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
