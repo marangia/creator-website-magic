@@ -9,6 +9,7 @@ import Features from '@/components/Features';
 import Button from '@/components/Button';
 import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 import { Search, FileText, ThumbsUp, Scissors } from 'lucide-react';
 
 const Index = () => {
@@ -367,54 +368,7 @@ const Index = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-50 border-t border-gray-200">
-        <div className="container py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <img 
-                src="/lovable-uploads/9c85c84a-b483-473c-acaa-daa1ac8a3576.png" 
-                alt="Visionabile" 
-                className="h-8 w-auto mb-4" 
-              />
-              <p className="text-gray-600">
-                Siti web professionali, veloci e ottimizzati per convertire visitatori in clienti.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-medium text-gray-900 mb-4">Chi siamo</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">La nostra storia</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">Team</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">Carriere</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-medium text-gray-900 mb-4">Servizi</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">Creazione siti web</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">Design</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">SEO</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-medium text-gray-900 mb-4">Contatti</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">info@visionabile.com</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">+39 123 456 7890</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-primary-600 transition-colors">Supporto</a></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
-            <p>© {new Date().getFullYear()} Visionabile. Tutti i diritti riservati.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
