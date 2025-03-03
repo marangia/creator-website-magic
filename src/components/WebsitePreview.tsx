@@ -1,16 +1,14 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import Button from './Button';
-
 interface WebsitePreviewProps {
   category?: string;
 }
-
-const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' }) => {
+const WebsitePreview: React.FC<WebsitePreviewProps> = ({
+  category = 'estetista'
+}) => {
   // This will be replaced with your actual images for each category later
   const [previewImage, setPreviewImage] = useState('/placeholder.svg');
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     // This effect will update the preview image when the category changes
     // For now, we'll just use a placeholder with the category name
@@ -18,39 +16,30 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
     // You'll replace this with your actual image paths later
     setPreviewImage(`/placeholder.svg?category=${category}`);
   }, [category]);
-
   useEffect(() => {
     // Intersection Observer for reveal animations
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
     const elements = document.querySelectorAll('.reveal');
-    elements.forEach((el) => {
+    elements.forEach(el => {
       observer.observe(el);
     });
-
     return () => {
-      elements.forEach((el) => {
+      elements.forEach(el => {
         observer.unobserve(el);
       });
     };
   }, []);
-
-  return (
-    <section className="container py-10">
+  return <section className="container py-5">
       {/* Horizontal scrollable container */}
-      <div 
-        ref={scrollContainerRef}
-        className="flex overflow-x-auto pb-6 scrollbar-hide scroll-smooth snap-x snap-mandatory"
-      >
+      <div ref={scrollContainerRef} className="flex overflow-x-auto pb-6 scrollbar-hide scroll-smooth snap-x snap-mandatory">
         <div className="flex w-full min-w-max gap-6 px-4 md:px-0 md:justify-center">
           {/* Desktop Preview */}
           <div className="w-[340px] md:w-[580px] lg:w-[640px] flex-shrink-0 snap-center reveal animate-fade-in">
@@ -81,7 +70,9 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
           </div>
           
           {/* Mobile Preview */}
-          <div className="w-[280px] flex-shrink-0 snap-center reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+          <div className="w-[280px] flex-shrink-0 snap-center reveal animate-fade-in" style={{
+          animationDelay: '200ms'
+        }}>
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border-4 border-gray-200 mx-auto max-w-[240px]">
               {/* Mobile header */}
               <div className="bg-gray-100 px-4 py-2 border-b border-gray-200 flex justify-end">
@@ -113,11 +104,11 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({ category = 'estetista' 
         <div className="w-2 h-2 rounded-full bg-gray-300"></div>
       </div>
       
-      <div className="mt-12 text-center flex flex-col items-center justify-center reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
+      <div className="mt-12 text-center flex flex-col items-center justify-center reveal animate-fade-in" style={{
+      animationDelay: '400ms'
+    }}>
         <Button size="lg">Crea il tuo sito</Button>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WebsitePreview;
