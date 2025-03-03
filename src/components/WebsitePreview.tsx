@@ -37,12 +37,12 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({
       });
     };
   }, []);
-  return <section className="container py-5">
+  return <section className="container py-[24px]">
       {/* Horizontal scrollable container */}
       <div ref={scrollContainerRef} className="flex overflow-x-auto pb-6 scrollbar-hide scroll-smooth snap-x snap-mandatory">
         <div className="flex w-full min-w-max gap-6 px-4 md:px-0 md:justify-center">
           {/* Desktop Preview */}
-          <div className="w-[340px] md:w-[580px] lg:w-[640px] flex-shrink-0 snap-center reveal animate-fade-in">
+          <div className="w-[350px] md:w-[580px] lg:w-[640px] flex-shrink-0 snap-center reveal animate-fade-in">
             <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200">
               {/* Browser mockup header */}
               <div className="bg-gray-100 px-4 py-3 flex items-center space-x-2 border-b border-gray-200">
@@ -80,7 +80,7 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({
               </div>
               
               {/* Mobile content */}
-              <div className="p-4 bg-gray-50 min-h-[400px]">
+              <div className="p-4 bg-gray-50 min-h-[200px]">
                 <div className="space-y-3">
                   <div className="w-3/4 h-4 bg-gray-200 rounded-full"></div>
                   <div className="w-full h-4 bg-gray-200 rounded-full"></div>
