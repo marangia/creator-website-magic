@@ -114,9 +114,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Come funziona
             </h2>
-            <p className="text-lg text-gray-600">
-              Zero rischi, nessuna attesa, niente anticipi
-            </p>
+            <p className="text-lg text-gray-600">Nessun rischio, zero attese, niente anticipi. Con Visionabile: </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
