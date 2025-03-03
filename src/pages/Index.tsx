@@ -10,7 +10,7 @@ import Button from '@/components/Button';
 import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
-import { Search, FileText, ThumbsUp, Scissors } from 'lucide-react';
+import { Search, FileText, ThumbsUp, Eye, SearchCheck, Sparkles, Clock, Headphones, Tag } from 'lucide-react';
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('estetista');
@@ -223,7 +223,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in">
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Scissors size={28} className="text-primary-600" />
+                  <Eye size={28} className="text-primary-600" />
                 </div>
               </div>
               <div>
@@ -238,7 +238,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Scissors size={28} className="text-primary-600" />
+                  <SearchCheck size={28} className="text-primary-600" />
                 </div>
               </div>
               <div>
@@ -253,7 +253,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Scissors size={28} className="text-primary-600" />
+                  <Sparkles size={28} className="text-primary-600" />
                 </div>
               </div>
               <div>
@@ -268,7 +268,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '300ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Scissors size={28} className="text-primary-600" />
+                  <Clock size={28} className="text-primary-600" />
                 </div>
               </div>
               <div>
@@ -283,7 +283,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '400ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Scissors size={28} className="text-primary-600" />
+                  <Headphones size={28} className="text-primary-600" />
                 </div>
               </div>
               <div>
@@ -298,7 +298,7 @@ const Index = () => {
             <div className="flex items-start gap-4 p-10 bg-[#FAFAFA] rounded-[16px] reveal animate-fade-in" style={{ animationDelay: '500ms' }}>
               <div className="flex-shrink-0">
                 <div className="p-1">
-                  <Scissors size={28} className="text-primary-600" />
+                  <Tag size={28} className="text-primary-600" />
                 </div>
               </div>
               <div>
