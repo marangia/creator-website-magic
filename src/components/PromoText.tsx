@@ -11,12 +11,12 @@ const PromoText = () => {
         </h2>
         
         <div className="mt-8 flex justify-center">
-          <div className="w-16 h-16 bg-purple-600 rounded-md flex items-center justify-center">
-            <div className="relative">
-              <div className="w-3 h-3 bg-white rounded-full absolute -top-1 left-0"></div>
-              <div className="w-3 h-3 bg-white rounded-full absolute -top-1 right-0"></div>
-              <div className="w-8 h-3 bg-white rounded-full absolute top-3"></div>
-            </div>
+          <div className="w-64 h-auto rounded-xl overflow-hidden shadow-lg">
+            <img 
+              src="/lovable-uploads/8587e43e-c790-4b0b-89c4-dc281bd415e3.png" 
+              alt="Visionabile smiley face" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
