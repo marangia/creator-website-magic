@@ -84,11 +84,12 @@ const Index = () => {
         <div className="container py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <img 
-                src="/lovable-uploads/9c85c84a-b483-473c-acaa-daa1ac8a3576.png" 
-                alt="Visionabile" 
-                className="h-8 w-auto mb-4" 
-              />
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="bg-[#7C3AED] w-8 h-8 rounded flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">V</span>
+                </div>
+                <span className="font-bold text-lg">Visionabile</span>
+              </div>
               <p className="text-gray-600">
                 Siti web professionali, veloci e ottimizzati per convertire visitatori in clienti.
               </p>
