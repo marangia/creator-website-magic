@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -162,7 +161,7 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Step 1 */}
-            <div className="flex flex-col items-center text-center p-6 reveal animate-fade-in">
+            <div className="flex flex-col items-start text-left p-6 reveal animate-fade-in">
               <div className="bg-primary-100 p-4 rounded-full mb-6">
                 <Search size={32} className="text-primary-600" />
               </div>
@@ -173,7 +172,7 @@ const Index = () => {
             </div>
             
             {/* Step 2 */}
-            <div className="flex flex-col items-center text-center p-6 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
+            <div className="flex flex-col items-start text-left p-6 reveal animate-fade-in" style={{ animationDelay: '100ms' }}>
               <div className="bg-primary-100 p-4 rounded-full mb-6">
                 <FileText size={32} className="text-primary-600" />
               </div>
@@ -184,7 +183,7 @@ const Index = () => {
             </div>
             
             {/* Step 3 */}
-            <div className="flex flex-col items-center text-center p-6 reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <div className="flex flex-col items-start text-left p-6 reveal animate-fade-in" style={{ animationDelay: '200ms' }}>
               <div className="bg-primary-100 p-4 rounded-full mb-6">
                 <ThumbsUp size={32} className="text-primary-600" />
               </div>
