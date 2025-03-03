@@ -1,5 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { Button } from './ui/button';
 
 const categories = [
   { id: 'estetista', label: 'Estetista' },
@@ -27,6 +29,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   const [showLeftShadow, setShowLeftShadow] = useState(false);
   const [showRightShadow, setShowRightShadow] = useState(true); // Always show right shadow at first
   const itemsPerView = 6; // Display 6 items at a time
+  const [scrollAmount, setScrollAmount] = useState(0);
 
   const handleTabChange = (categoryId: string) => {
     setActiveTab(categoryId);
@@ -52,10 +55,49 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
     }
   };
 
+  // Calculate scroll distance based on tab width
+  const calculateScrollDistance = () => {
+    if (tabsRef.current) {
+      const tabWidth = tabsRef.current.querySelector('button')?.offsetWidth || 120;
+      return tabWidth * itemsPerView;
+    }
+    return 600; // Fallback value
+  };
+
+  // Scroll left by 6 items
+  const scrollLeft = () => {
+    if (tabsRef.current) {
+      const scrollDistance = calculateScrollDistance();
+      const newScrollAmount = Math.max(0, scrollAmount - scrollDistance);
+      setScrollAmount(newScrollAmount);
+      
+      tabsRef.current.scrollTo({
+        left: newScrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Scroll right by 6 items
+  const scrollRight = () => {
+    if (tabsRef.current) {
+      const scrollDistance = calculateScrollDistance();
+      const maxScroll = tabsRef.current.scrollWidth - tabsRef.current.clientWidth;
+      const newScrollAmount = Math.min(maxScroll, scrollAmount + scrollDistance);
+      setScrollAmount(newScrollAmount);
+      
+      tabsRef.current.scrollTo({
+        left: newScrollAmount,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   // Check if scrolling shadows should be shown
   const checkScrollShadows = () => {
     if (tabsRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = tabsRef.current;
+      setScrollAmount(scrollLeft);
       setShowLeftShadow(scrollLeft > 10);
       setShowRightShadow(scrollLeft < scrollWidth - clientWidth - 10);
     }
@@ -81,6 +123,19 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   return (
     <div className="container py-12">
       <div className="relative" ref={tabContainerRef}>
+        {/* Left scroll arrow */}
+        {showLeftShadow && (
+          <Button 
+            variant="outline" 
+            size="icon" 
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border-gray-200 rounded-full"
+            onClick={scrollLeft}
+            aria-label="Scroll left"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </Button>
+        )}
+        
         {/* Left scroll shadow */}
         {showLeftShadow && (
           <div className="absolute left-0 top-0 bottom-2 w-12 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent"></div>
@@ -119,6 +174,18 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
           <div className="absolute right-0 top-0 bottom-2 w-12 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent"></div>
         )}
         
+        {/* Right scroll arrow */}
+        {showRightShadow && (
+          <Button 
+            variant="outline" 
+            size="icon" 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border-gray-200 rounded-full"
+            onClick={scrollRight}
+            aria-label="Scroll right"
+          >
+            <ChevronRight className="h-5 w-5" />
+          </Button>
+        )}
       </div>
     </div>
   );
