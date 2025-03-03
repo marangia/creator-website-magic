@@ -1,4 +1,3 @@
-
 import React, { useState, useRef, useEffect } from 'react';
 
 const categories = [
@@ -92,7 +91,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
                 onClick={() => handleTabChange(category.id)}
                 className={`relative whitespace-nowrap px-4 py-2 text-base md:text-lg transition-all duration-300 tab-underline ${
                   activeTab === category.id 
-                    ? 'text-primary-600 font-medium active' 
+                    ? 'text-primary-600 font-semibold active' 
                     : 'text-gray-500 hover:text-gray-800'
                 }`}
               >
@@ -107,7 +106,6 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
           <div className="absolute right-0 top-0 bottom-2 w-12 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent"></div>
         )}
         
-        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-gray-200"></div>
       </div>
     </div>
   );
