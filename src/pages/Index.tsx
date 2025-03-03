@@ -65,7 +65,7 @@ const Index = () => {
           }}>
               <h2 className="text-3xl md:text-4xl font-bold">Identikit di un sito che funziona</h2>
               
-              <p className="text-lg text-gray-600">Dopo aver soddisfatto migliaia di attività, ecco cosa ti farà vincere online:</p>
+              <p className="text-lg text-gray-600">Affidandoti <span className="text-purple-600 font-semibold">(GRATIS)</span> a <span className="text-purple-600">Visionabile</span>, questo è quello che ti promettiamo nelle prossime 24h:</p>
               
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -115,7 +115,7 @@ const Index = () => {
               Come funziona
             </h2>
             <p className="text-lg text-gray-600">
-              Ci pensiamo noi. Con <span className="text-primary-600 font-semibold">Visionabile</span> puoi dire <span className="text-primary-600 font-semibold">per sempre addio</span> a
+              Affidandoti <span className="text-purple-600 font-semibold">(GRATIS)</span> a <span className="text-purple-600">Visionabile</span>, questo è quello che ti promettiamo nelle prossime 24h:
             </p>
           </div>
           
