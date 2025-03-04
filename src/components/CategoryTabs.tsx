@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './ui/button';
@@ -140,7 +141,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
 
   return (
     <div className="w-full px-4 py-12">
-      <div className="relative" ref={tabContainerRef}>
+      <div className="relative max-w-4xl mx-auto" ref={tabContainerRef}>
         {/* Left scroll arrow - only show on desktop */}
         {showLeftShadow && !isMobile && (
           <Button 
@@ -161,10 +162,10 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
         
         <div 
           ref={tabsRef}
-          className="flex overflow-x-auto py-1 pb-2 scrollbar-hide scroll-smooth"
+          className="flex overflow-x-auto py-1 pb-2 scrollbar-hide scroll-smooth md:justify-center"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          <div className="flex space-x-6 md:space-x-8 px-4 mx-auto">
+          <div className="flex space-x-6 md:space-x-8 px-4">
             {categories.map((category) => (
               <button
                 id={`tab-${category.id}`}
