@@ -171,7 +171,7 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
                 id={`tab-${category.id}`}
                 key={category.id}
                 onClick={() => handleTabChange(category.id)}
-                className={`relative whitespace-nowrap px-4 py-2 text-base md:text-lg transition-all duration-300 tab-underline ${
+                className={`relative whitespace-nowrap px-4 py-2 text-base md:text-lg transition-all duration-300 tab-underline min-w-max ${
                   activeTab === category.id 
                     ? 'text-primary-600 font-semibold active' 
                     : 'text-gray-500 hover:text-gray-800 border-b border-gray-200'
