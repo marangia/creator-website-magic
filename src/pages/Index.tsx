@@ -206,9 +206,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Perché scegliere <span className="text-primary-600">Visionabile</span>
             </h2>
-            <p className="text-lg text-gray-600">
-              Zero rischi, nessuna attesa, niente anticipi
-            </p>
+            <p className="text-lg text-gray-600">Niente rischi. Zero attese. Nessun anticipo</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mb-16">
