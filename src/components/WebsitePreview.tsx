@@ -1,23 +1,22 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Button from './Button';
+
 interface WebsitePreviewProps {
   category?: string;
 }
+
 const WebsitePreview: React.FC<WebsitePreviewProps> = ({
   category = 'estetista'
 }) => {
-  // This will be replaced with your actual images for each category later
   const [previewImage, setPreviewImage] = useState('/placeholder.svg');
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
-    // This effect will update the preview image when the category changes
-    // For now, we'll just use a placeholder with the category name
     console.log(`Category changed to: ${category}`);
-    // You'll replace this with your actual image paths later
     setPreviewImage(`/placeholder.svg?category=${category}`);
   }, [category]);
+
   useEffect(() => {
-    // Intersection Observer for reveal animations
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -37,6 +36,7 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({
       });
     };
   }, []);
+
   return <section className="container py-[24px]">
       {/* Horizontal scrollable container */}
       <div ref={scrollContainerRef} className="flex overflow-x-auto pb-6 scrollbar-hide scroll-smooth snap-x snap-mandatory">
@@ -87,8 +87,8 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({
                   <div className="w-2/3 h-4 bg-gray-200 rounded-full"></div>
                 </div>
                 
-                <div className="mt-8 py-10 border-t border-b border-gray-200">
-                  <div className="w-full h-[240px] bg-gray-100 rounded-lg flex items-center justify-center">
+                <div className="mt-4 py-4 border-t border-b border-gray-200">
+                  <div className="w-full h-[180px] bg-gray-100 rounded-lg flex items-center justify-center">
                     <p className="text-xs text-gray-400">Mobile preview for {category}</p>
                   </div>
                 </div>
@@ -111,4 +111,5 @@ const WebsitePreview: React.FC<WebsitePreviewProps> = ({
       </div>
     </section>;
 };
+
 export default WebsitePreview;
