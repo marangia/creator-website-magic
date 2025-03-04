@@ -139,8 +139,8 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
   }, []);
 
   return (
-    <div className="w-full px-4 py-12">
-      <div className="relative max-w-4xl mx-auto" ref={tabContainerRef}>
+    <div className="w-full py-12">
+      <div className="relative max-w-4xl mx-auto px-4" ref={tabContainerRef}>
         {/* Left scroll arrow - only show on desktop */}
         {showLeftShadow && !isMobile && (
           <Button 
@@ -161,16 +161,16 @@ const CategoryTabs: React.FC<CategoryTabsProps> = ({ onCategoryChange }) => {
         
         <div 
           ref={tabsRef}
-          className="flex overflow-x-auto py-1 pb-2 scrollbar-hide scroll-smooth md:justify-center"
+          className="flex overflow-x-auto py-1 pb-2 scrollbar-hide scroll-smooth"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
-          <div className="flex space-x-6 md:space-x-8 px-4">
+          <div className="flex space-x-8 md:space-x-10 w-full">
             {categories.map((category) => (
               <button
                 id={`tab-${category.id}`}
                 key={category.id}
                 onClick={() => handleTabChange(category.id)}
-                className={`relative whitespace-nowrap px-6 py-2 text-base md:text-lg transition-all duration-300 tab-underline min-w-max ${
+                className={`relative whitespace-nowrap px-3 py-2 text-base md:text-lg transition-all duration-300 tab-underline flex-shrink-0 ${
                   activeTab === category.id 
                     ? 'text-primary-600 font-semibold active' 
                     : 'text-gray-500 hover:text-gray-800 border-b border-gray-200'
